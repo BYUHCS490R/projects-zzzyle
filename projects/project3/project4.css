@@ -1,0 +1,42 @@
+h1 {
+    color: #de6fa1;
+}
+
+nav {
+    color:#008BCC;
+}
+
+body {
+    background-color: #f8e9e9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    color: #696969;
+}
+h2 {
+    color: #d87093;
+}
+h3 {
+    color: #d87093;
+}
+
+footer {
+    color: #4a6282;
+}
+
+.cursive {
+    color: #d87093;
+    font-family: cursive;
+    font-size: 17pt;
+}
+
+.color {
+    font-style: italic;
+}
+
+#yellow {
+    color: #FF7F11;
+}
+
+#purple {
+    color: #CA3F6D;
+}
