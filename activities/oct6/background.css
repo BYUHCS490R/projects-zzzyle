@@ -1,0 +1,24 @@
+ body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('marble.jpg');
+    background-repeat: repeat-x;
+    background-color: rgb(216, 112, 147);
+ }
+
+
+ header{
+    background-image: url(flower.jpeg);
+    background-repeat: no-repeat;
+    background-position: right;
+    /* background-image: url(flower.jpeg) no-repeat right; */
+ }
+
+.mylist {
+   /* list-style-type: none; */
+   list-style-image: url(dot.png);
+    
+}
+
+ .shortcut {
+    background: url(marble.jpg) rgb(216, 112, 147);
+ }
