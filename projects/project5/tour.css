@@ -1,0 +1,37 @@
+nav a {
+    color: palevioletred;
+}
+
+.current {
+    color: black;
+}
+
+.homestyle {
+    background-color: lightpink;
+}
+
+.bullet {
+    list-style-image: url(bullet.png);
+}
+
+body {
+    background-image: url(bg3.jpeg);
+    background-repeat: repeat-x;
+}
+
+header {
+    background-image: url(fg1.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+h1 {
+    font-style: italic;
+    color: rgb(27, 24, 24);
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    color: rgb(38, 40, 40);
+}
