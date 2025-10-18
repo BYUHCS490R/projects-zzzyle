@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 33% 33% 33%; /* OR Fractional Units: 1fr 5fr 1fr */
+    gap: 10px;
+}
+
+.child {
+    background-color: pink;
+    /* margin: 10px; OR gap */
+    text-align: center;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-areas:
+    "top top top"
+    "lside middle rside"
+    "bottom bottom bottom";
+}
+
+header {
+    grid-area: top;
+}
+
+nav {
+    grid-area: left;
+}
+
+main {
+    grid-area: middle;
+}
+
+footer {
+    grid-area: botoom;
+}
