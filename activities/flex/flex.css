@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: ivory;
+}
+
+.card {
+    border: thin solid black;
+    border-radius: 5px;
+    margin: 5px;
+    box-shadow: 5px 5px 3px rgba(50,50,50,0.8);
+    color: palevioletred
+    width:150px;
+}
+
+nav {
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+nav a {
+    display: block;
+    padding: 10px;
+    background-color: pink;
+    color: black;
+    text-decoration: none;
+    width:150px;
+}
+
+nav a:hover {
+    background-color: ivory;
+    color: pink;
+    text-decoration: underline;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly; /*space around,between,evenly*/
+   /* flex-direction: row;
+   flex-wrap: wrap; */
+}
+
+.mainthing {
+    order: -1;
+}
+
