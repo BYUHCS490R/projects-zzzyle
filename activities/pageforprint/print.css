@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
     text-align: center;
     font-style: oblique;
 }
@@ -44,6 +44,7 @@ header {
 .card {
     width: 200px;
     border: thin solid black;
+    box-shadow: 3px 3px 3px black;
     margin: 5px;
 }
 
@@ -69,5 +70,28 @@ body {
 
 main h2 {
     margin: 0;
-}
+} */
 
+@media ONLY screen AND (max-width: 500px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mainrow {
+        flex-direction: column-reverse;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .maincard {
+        order: -1;
+    }
+    
+}
