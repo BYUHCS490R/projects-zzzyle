@@ -1,0 +1,109 @@
+h1 {
+    text-align: center;
+    font-style: oblique;
+    margin: auto;
+}
+
+nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: palevioletred;
+    background-color: ivory
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: ivory;
+}
+
+nav a:hover {
+    background-color: palevioletred;
+    color: ivory;
+    text-decoration: underline;
+}
+
+header {
+    background-color: palevioletred;
+    color: ivory;
+    margin: 0;
+}
+
+.mainrowz {
+    display: flex;
+}
+
+.sidebar {
+    width: 30%;
+}
+
+.sidecard {
+    width: 200px;
+    margin: 5px;
+}
+
+.sidecard img {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.card {
+    width: 200px;
+    border: thin solid black;
+    box-shadow: 3px 3px 3px grey;
+    margin: 5px;
+}
+
+.card img {
+    width: 100%;
+}
+
+
+h3 {
+    color: palevioletred;
+    text-align: center;
+}
+
+h2 {
+    background-color: palevioletred;
+    color: ivory;
+}
+
+body {
+    margin: 0;
+}
+
+main h2 {
+    margin: 0;
+}
+
+@media ONLY screen AND (max-width: 500px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mainrowz {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        order: 2;
+    }
+    
+    .main {
+        order: 1;
+    }
+
+    
+}
