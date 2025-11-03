@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tables</title>
-    <link rel="stylesheet" href="tables.css">
+    <link rel="stylesheet" href="table.css">
 </head>
 <body>
     <header>
@@ -13,8 +13,9 @@
    
     <main>
         <h1>Tables</h1>
-        <table border="1">
-            <thread>
+        <table class="schedule">
+            <caption>My Class Schedule</caption>
+            <thead>
                 <tr>
                     <th>Department</th>
                     <th>Number</th>
@@ -26,10 +27,9 @@
                 <tr>
                     <td colspan="6"> Fall 2025</td>
                 </tr>
+            </thead>
 
-            </thread>
-
-            <body>
+            <tbody>
                 <tr>
                     <td>CS</td>
                     <td rowspan="2">140</td>
@@ -74,16 +74,15 @@
                     <td>4</td>
                 </tr>
 
-            </body>
+            </tbody>
 
-            <footer>
+            <tfoot>
                 <tr>
                     <th colspan="5" id="total-credits"> Total Credits </th>
                     <td headers="total-credits">14</td>
                 </tr>
-            </footer>
+            </tfoot>
            
-
         </table>
 
         <h2>Engagement</h2>
