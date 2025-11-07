@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <h1>Zyle's Web Design
+        </h1>
+    </header>
+
+    <main>
+        <h1>Forms</h1>
+        <form action="formprocess.html" method="post">
+            <div>
+                <label for="full-name">Full Name:</label>
+                <input type="text" name="fname" id="full-name" placeholder="Full Name">
+            </div>
+
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" name="lname" id="email" value="your@email.com">
+            </div>
+
+            <div>
+                <label for="pass">Password:</label>
+                <input type="password" name="pass" id="pass">
+            </div>
+
+            <div>
+                <label for="state">State:</label>
+                <select name="state" id="state">
+                    <option value="blank">----</option>
+                    <option value="CA">California</option>
+                    <option value="HI" selected>Hawaiii</option>
+                    <option value="UT">Utah</option>
+                </select>
+            </div>
+
+            <div>
+                <label><input type="checkbox" name="agree"> I agree to terms and conditions. </label>
+            </div>
+
+            <div>
+                Gender: 
+                <label> <input type="radio" name="gender" value="male">Male</label>
+                <label> <input type="radio" name="gender" value="Female">Female</label>
+            </div>
+
+            <div>
+                <label for="comments">Comments</label>
+                <textarea name="comments" id="comments">Hello! </textarea>
+            </div>
+
+            <input type="submit" value="Sign Up">
+        </form>
+
+    
+        <div>
+            <ol>
+                <li> The form tag has an "action" attribute. What does it do? Submitting a form will be clicking a link and redirecting you to another site. Whatever you put in it will be redirected there.  </li>
+                <li>The form tag has a "method" attribute. What does it do? Method is when you can choose GET or POST. POST is changing, adding, updating, and deleting something. GET is just reading something or clicking on links.  </li>
+                <li>What is the difference between a "POST" and a "GET"? Get will show the information in the URL but the POST will hide the information in the URL. The data wil still go through the sever, it just won't show the information you're sending.</li>
+            </ol>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>&copy;2025 Zyle</p>
+    </footer>
+
+
+
+
+
+</body>
+</html>
