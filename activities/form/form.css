@@ -2,3 +2,65 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+fieldset {
+    background-color: rgb(238, 197, 203);
+    width: 80%;
+    margin: auto;
+}
+
+legend {
+    padding: 20px;
+    color: white;
+    background-color: palevioletred ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-row, .check-row {
+    display: flex;
+    gap: 10px; /*space in between the box and the title*/
+    margin: 15px 0; /*space in between the boxes up and down, 1 number is all around, 2 is up and down*/
+}
+
+.form-row label {
+    width: 150px; /*aligning the boxes*/
+    text-align: right; /*aligning text*/
+}
+
+.form-row input:not([type='submit']), .form-row select, .form-row textarea /*this is for the space inside boxes and colors*/{
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.form-row input:not([type='submit']):focus, .form-row select:focus, .form-row textarea:focus{ /*making the boxes ivory when filling it out*/
+    background-color: ivory;
+}
+
+.form-row input:not([type='submit']){
+    color: white;
+    background-color: palevioletred;
+    padding: 10px; 
+}
+
+.spacer {
+    width: 150px;
+    text-align: right;
+}
+
+@media ONLY screen AND (max-width: 480px) /*for mobile devices*/ {
+    .form-row, .check-row {
+        flex-direction: column;
+    }
+
+    fieldset {
+        width: 95%;
+    }
+
+    .form-row label, .spacer {
+        text-align: left;
+    }
+}
+
+
+
+
+
