@@ -1,0 +1,71 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+fieldset {
+    background-color: rgb(237, 216, 219);
+    width: 80%;
+    margin: auto;
+}
+
+legend {
+    padding: 20px;
+    color: white;
+    background-color: rgb(165, 39, 79) ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.align-row, .check-row {
+    display: flex;
+    gap: 10px; 
+    margin: 15px 0; 
+}
+
+.align-row label {
+    width: 150px; 
+    text-align: right; 
+}
+
+.align-row input:not([type='submit']), .align-row select, .align-row textarea /*this is for the space inside boxes and colors*/{
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.align-row input:not([type='submit']):focus, .align-row select:focus, .align-row textarea:focus{ /*making the boxes ivory when filling it out*/
+    background-color: white;
+}
+
+.align-row input:not([type='submit']){
+    color: black;
+    background-color: ivory;
+    padding: 10px; 
+}
+
+.spacer {
+    width: 150px;
+    text-align: right;
+}
+
+@media ONLY screen AND (max-width: 480px) /*for mobile devices*/ {
+    .align-row, .check-row {
+        flex-direction: column;
+    }
+
+    fieldset {
+        width: 95%;
+    }
+
+    .align-row label, .spacer {
+        text-align: left;
+    }
+}
+
+
+
+
+
