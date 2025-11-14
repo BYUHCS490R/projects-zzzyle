@@ -14,13 +14,13 @@
 
     <main>
         <h1>Forms</h1>
-        <form action="formprocess.html" method="post">
+        <form action="formprocess.html" method="post" id="myForm">
             <fieldset>
                 <legend>Sign Up Form</legend>
 
                 <div class="form-row">
                     <label for="full-name">Full Name:</label>
-                    <input type="text" name="fname" id="full-name" placeholder="Full Name">
+                    <input type="text" name="fname" id="fullname" placeholder="Full Name">
                 </div>
 
                 <div class="form-row">
@@ -80,6 +80,14 @@
                     <li>What are different ways to style your form? You can edit the spacing, align the items, add colors and box shadows, add fields and legends, etc. </li>
                     <li>How does flex help for both Desktop and Mobile phones? It makes it easier to edit and configure the form in a big and small screen. </li>
                 </ol>
+
+            <h2> Engagement 3 - 11/14</h2>
+                <ol> 
+                    <li> What is JavaScript? How did it get its name? JavaScript is a programming language, alongside HTML and CSS. Developed by Sun Microsystems and named after a coffee. </li>
+                    <li> What are the two ways you can run JavaScript? FRONT END: In a browser with HTML. In the DOM. BACK END: Node.js </li>
+                    <li> What was the most popular front-end js library? jQuery lib, React (react native), </li>
+                    <li> What is the most popular back-end js library today? Express.js</li>
+                </ol>
             
         </div>
 
@@ -90,7 +98,37 @@
         <p>&copy;2025 Zyle</p>
     </footer>
 
+    <script>
+        document.getElementById('myForm').addEventListener('submit',function(event) { 
+            event.preventDefault();
 
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('pass').value;
+
+
+            if (!fullname || !email) {
+                alert("You need a name and email.");
+                return;
+            }
+
+
+            const formData = {
+                name: fullname,
+                email: email,
+                password: pass, 
+            }
+
+            alert("Form Submitted");
+            console.log(formData);
+
+
+        });
+
+        
+  
+
+    </script>
 
 
 
