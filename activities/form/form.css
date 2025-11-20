@@ -43,7 +43,7 @@ legend {
 
 .spacer {
     width: 150px;
-    text-align: right;
+    text-align: center;
 }
 
 @media ONLY screen AND (max-width: 480px) /*for mobile devices*/ {

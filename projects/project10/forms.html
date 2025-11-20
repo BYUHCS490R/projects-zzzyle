@@ -8,53 +8,68 @@
 </head>
 <body>
     <header>
-        <h1>Project 10 - Forms</h1>
+        <h1>Project 10 and 11</h1>
     </header>
 
     <main>
-        <h1>Forms</h1>
-        <form action="formsprocess.html" method="post">
-            <fieldset>
-                <legend>Survey</legend>
+        <div id="message">
+            <h1>Forms</h1>
+            <form action="formsprocess.html" method="post" id="myForm">
+                <fieldset>
+                    <legend>Survey</legend>
 
-                <div class="align-row">
-                    <label for="first-name">First Name:</label>
-                    <input type="text" name="fname" id=first-name placeholder="First Name">
-                </div>
+                    <div class="align-row">
+                        <label for="fullname">Full Name:</label>
+                        <input type="text" name="fullname" id=fname placeholder="Full Name">
+                    </div>
 
-                <div class="align-row">
-                    <label for="last-name">Last Name:</label>
-                    <input type="text" name="lname" id="last-name" placeholder="Last Name">
-                </div>
+                    <div class="align-row">
+                        <label for="email">Email:</label>
+                        <input type="email" name="lname" id="email" placeholder="Email">
+                    </div>
 
-                 <div class="align-row">
-                    <label for="email">Email:</label>
-                    <input type="email" name="lname" id="email" placeholder="Email">
-                </div>
+                    <div class="align-row">
+                        <label for="pass">Password:</label>
+                        <input type="password" name="pass" id="pass">
+                    </div>
 
-                <div class="align-row">
-                    <label for="pass">Password:</label>
-                    <input type="password" name="pass" id="pass">
-                </div>
+                    <div class="align-row">
+                            <label for="race">Ethnicity</label>
+                            <select name="race" id="race">
+                                <option value="blank">----</option>
+                                <option value="AS">Asian</option>
+                                <option value="AF">Black or African American</option>
+                                <option value="HI">Hispanic or Latino</option>
+                                <option value="PI">Pacific Islander</option>
+                                <option value="WH">White</option>
+                                <option value="phones?">Prefer not to say</option>
+                            </select>
+                    </div>
 
-                 <div class="align-row">
-                    <label for="email">Date and Time:</label>
-                    <input type="datetime-local" name="datetime-local" id="datetime-local">
-                </div>
+                    <div class="align-row">
+                        <label for="email">Date and Time:</label>
+                        <input type="datetime-local" name="datetime-local" id="datetime-local">
+                    </div>
 
-                <div class="align-row">
-                    <div class="spacer">Gender:</div>
-                    <label><input type="radio" name="gender" value="male">Male</label>
-                    <label> <input type="radio" name="gender" value="Female">Female</label>
-                </div>
+                    <div class="align-row">
+                        <div class="spacer">Gender:</div>
+                        <label><input type="radio" name="gender" value="male">Male</label>
+                        <label> <input type="radio" name="gender" value="Female">Female</label>
+                    </div>
 
-                <div class="align-row">
-                    <div class="spacer"></div>
-                    <label><input type="checkbox" name="agree"> I agree to terms and conditions. </label>
-                </div>
-            </fieldset>
-        </form>
+                    <div class="align-row">
+                        <div class="spacer"></div>
+                        <label><input type="checkbox" name="agree"> I agree to terms and conditions. </label>
+                    </div>
 
+                    <div class="align-row">
+                        <div class="spacer"></div>
+                        <input type="submit" value="Sign Up">
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
 
     </main>
 
@@ -64,6 +79,47 @@
         <p>&copy;2025 Zyle Dana</p>
     </footer>
 
-    
+     <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) { 
+    event.preventDefault();
+
+    const fullname = document.getElementById('fname').value;
+    const email = document.getElementById('email').value;
+    const pass = document.getElementById('pass').value;
+
+    if (!fullname || !email) {
+        alert("You need a name and email.");
+        return;
+    }
+
+    const formData = {
+        name: fullname,
+        email: email,
+        password: pass
+    };
+
+    alert("Form Submitted");
+    console.log(formData);
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "forms.json", true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            alert("Form Submitted successfully!");
+            const response = JSON.parse(xhr.responseText);
+            console.log(response);
+            document.getElementById('myForm').innerHTML = '';
+            document.getElementById('message').innerText = response.message;
+        } else if (xhr.readyState === 4) {
+            alert("Error submitting form");
+        }
+    };
+
+    xhr.send(JSON.stringify(formData));
+});
+</script>
+
 </body>
 </html>
