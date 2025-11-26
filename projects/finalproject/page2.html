@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cities</title>
     <link rel="stylesheet" href="project.css">
 </head>
 <body>
@@ -13,73 +13,162 @@
             <a href="page1.html">Geography</a>
             <a href="page2.html">Cities</a>
             <a href="page3.html">History</a>
-            <a href="page4.html">Trave Guide</a>
+            <a href="page4.html">Travel Guide</a>
             <a href="page5.html">Food</a>
         </nav>
     </header>
 
+    <main>
+        <div class="mainrowz">
+                <div class="table">
+                    <table class="cities">
+                        <caption>Must See Cities in Switzerland</caption>
+                        <thead>
+                            <tr>
+                                <th>City Name</th>
+                                <th>Language Spoken</th>
+                                <th>Population</th>
+                                <th>Evelation</th>
+                                <th>Interesting Fact</th>
+                            </tr>
 
-    <div class="mainrowz"> 
-            <div class="table">
-                <table class="songs"> 
-                    <caption>Must See Cities in Switzerland</caption>
-                    <thead>
-                        <tr>
-                            <th>City Name</th>
-                            <th>Language Spoken</th>
-                            <th>Population</th>
-                            <th>Evelation</th>
-                            <th>Interesting Fact</th>
-                        </tr>
+                            <tr>
+                                <td colspan="5">as of 2025</td>
+                            </tr>
+                        </thead>
 
-                        <tr>
-                            <td colspan="5">as of 2025</td>
-                        </tr>
-                    </thead>
+                        <tbody>
+                            <tr>
+                                <td>Zurich</td>
+                                <td>German-speaking</td>
+                                <td>1,455,000</td>
+                                <td>408 m (1,339 ft)</td>
+                                <td>It has Europe's largest techno street parade.</td>
+                            </tr>
 
-                    <tbody>
-                        <tr>
-                            <td>Zurich</td>
-                            <td>German-speaking</td>
-                            <td>1,455,000</td>
-                            <td>August 2, 1986</td>
-                            <td>125 minutes</td>
-                        </tr>
+                            <tr>
+                                <td>Bern</td>
+                                <td>German/French-speaking</td>
+                                <td>448,000</td>
+                                <td>540 m (1,772 ft)</td>
+                                <td>Bears still live in the city—as symbols and residents.</td>
+                            </tr>
 
-                        <tr>
-                            <td>Bern</td>
-                            <td>German/French-speaking</td>
-                            <td>448,000</td>
-                            <td>April 16, 1988</td>
-                            <td>88 minutes</td>
-                        </tr>
+                            <tr>
+                                <td>Zermatt</td>
+                                <td>German-speaking</td>
+                                <td>5,800</td>
+                                <td>1,608 m (5,276 ft)</td>
+                                <td>No cars are allowed.</td>
+                            </tr>
 
-                        <tr>
-                            <td>Zermatt</td>
-                            <td>German-speaking</td>
-                            <td>5,800</td>
-                            <td>July 29, 1989</td>
-                            <td>103 minutes</td>
-                        </tr>
+                            <tr>
+                                <td>Lucerne</td>
+                                <td>German-speaking</td>
+                                <td>57,066</td>
+                                <td>436 m (1,430 ft)</td>
+                                <td>Its wooden bridge is older than the United States.</td>
+                            </tr>
 
-                        <tr>
-                            <td>Lucerne</td>
-                            <td>German-speaking</td>
-                            <td>57,066</td>
-                            <td>July 20, 1991</td>
-                            <td>119 minutes</td>
-                        </tr>
+                            <tr>
+                                <td>Geneva</td>
+                                <td>French-speaking</td>
+                                <td>644,513</td>
+                                <td>375 m (1,230 ft)</td>
+                                <td>It has the world's longest bench.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+       
+        <div id="message">
+            <h1>Join our Newsletter</h1>
+            <form action="formsprocess.html" method="post" id="myForm">
+                <fieldset>
+                    <legend>Fill up the Form</legend>
 
-                        <tr>
-                            <td>Geneva</td>
-                            <td>French-speaking</td>
-                            <td>644,513</td>
-                            <td>July 18, 1992</td>
-                            <td>93 minutes</td>
-                        </tr>
+                    <div class="align-row">
+                        <label for="fname">Full Name:</label>
+                        <input type="text" name="fullname" id="fname" placeholder="Full Name">
+                    </div>
 
-                    </tbody>
-                </table>
-    
+                    <div class="align-row">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Email">
+                    </div>
+
+                    <div class="align-row">
+                            <label for="race">Which part of Switzerland the user wants to learn about</label>
+                            <select name="race" id="race">
+                                <option value="blank">----</option>
+                                <option value="AS">Zurich</option>
+                                <option value="AF">Bern</option>
+                                <option value="HI">Zermatt</option>
+                                <option value="PI">Lucerne</option>
+                                <option value="WH">Geneva</option>
+                            </select>
+                    </div>
+
+                    <div class="align-row">
+                        <div class="spacer"></div>
+                        <label><input type="checkbox" name="agree"> I agree to terms and conditions. </label>
+                    </div>
+
+                    <div class="align-row">
+                        <div class="spacer"></div>
+                        <input type="submit" value="Sign Up">
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy;2025 Zyle Dana</p>
+    </footer>
+
+     <script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const fullname = document.getElementById('fname').value;
+    const email = document.getElementById('email').value;
+
+    if (!fullname || !email) {
+        alert("You need a name and email.");
+        return;
+    }
+
+    const formData = {
+        name: fullname,
+        email: email,
+    };
+
+    alert("Form Submitted");
+    console.log(formData);
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "project.json", true);
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            alert("Form Submitted successfully!");
+            const response = JSON.parse(xhr.responseText);
+            console.log(response);
+            document.getElementById('myForm').innerHTML = '';
+            document.getElementById('message').innerText = response.message;
+        } else if (xhr.readyState === 4) {
+            alert("Error submitting form");
+        }
+    };
+
+    xhr.send(JSON.stringify(formData));
+});
+</script>
+
 </body>
 </html>

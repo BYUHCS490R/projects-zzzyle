@@ -61,7 +61,7 @@ h1 {
     padding: 20px;
 }
 
-.songs {
+.cities {
     caption-side: top;
     border-spacing: 0;
     background-color: #F8E9E9;
@@ -70,18 +70,18 @@ h1 {
     width: 80%;
 }
 
-.songs thead tr {
+.cities thead tr {
     background-color: #D87093;
     color: white;
     text-align: center;
 }
 
-.songs tbody tr:nth-child(even) {
+.cities tbody tr:nth-child(even) {
     border-bottom: thin solid black;
     background-color: #9FB4BC;
 }
 
-.songs tfoot tr {
+.cities tfoot tr {
     background-color: #E9AFC2;
     color: rgb(13, 130, 21);
 }
@@ -92,4 +92,11 @@ h1 {
 
 caption {
     font-size: 20pt;
+}
+
+/*page 3*/
+
+.flex {
+    display: flex;
+    width: auto;
 }
