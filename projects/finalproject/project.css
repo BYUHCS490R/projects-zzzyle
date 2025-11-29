@@ -100,3 +100,7 @@ caption {
     display: flex;
     width: auto;
 }
+
+.center {
+    text-align: center;
+}
