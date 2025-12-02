@@ -1,3 +1,8 @@
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #F8E9E9;
+}
 
 nav a {
     display: block;
@@ -5,12 +10,6 @@ nav a {
     text-decoration: none;
     color: #D87093;
     background-color: #F8E9E9
-}
-
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #F8E9E9;
 }
 
 nav a:hover {
@@ -23,11 +22,41 @@ h1 {
     text-align: center;
 }
 
+.black a {
+    display: block;
+    padding: 15px;
+    text-decoration: underline;
+    color: #050203;
+    background-color: #F8E9E9
+}
+
+.black {
+    text-decoration: none;
+    color: #000000;
+}
+
+
+#pink {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #D87093;
+    background-color: #F8E9E9
+}
+
 /*homepage*/
 
  .frame {
     text-align: center;
  }
+
+.frame img {
+    max-width: 100%;
+    width: 75%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
 
 
  /*page 1*/
@@ -94,6 +123,13 @@ caption {
     font-size: 20pt;
 }
 
+.align-row {
+    display: flex;
+    gap: 10px; 
+    margin: 15px 0; 
+}
+
+
 /*page 3*/
 
 .flex {
@@ -103,4 +139,54 @@ caption {
 
 .center {
     text-align: center;
+}
+
+.center img {
+    max-width: 100%;
+    width: 75%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+/*mobile*/
+
+@media only screen and (max-width: 480px) {
+   main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        order: 1;
+    }
+    
+    .sidebar {
+        order: 2;
+        width: 100%;
+    }
+
+    .frame iframe{
+        width: 100%;
+        height: auto;
+    }
+
+    fieldset {
+        width: 95%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    
 }
