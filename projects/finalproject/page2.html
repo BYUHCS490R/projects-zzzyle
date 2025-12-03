@@ -20,12 +20,9 @@
 
     <main>
         <div>
-            <p>There are a lot of cities in Switzerland </p>
-
-
+            <h1>Introduction</h1>
+                <p>Switzerland is home to several must-see cities, each offering its own unique charm. Zurich blends modern life with historic old-town streets. Geneva stands out with its stunning lakeside views. Lucerne captivates visitors with its medieval architecture. Meanwhile, Bern—Switzerland's capital—wins hearts with its traditional character. Together, these cities showcase the perfect mix of history, beauty, and Swiss lifestyle. Check out each information of the top 5 cities in Switzerland. </p>
         </div>
-
-
 
 
         <div class="mainrowz">
@@ -140,44 +137,38 @@
     </footer>
 
      <script>
-    document.getElementById('myForm').addEventListener('submit', function(event) {
-    event.preventDefault();
 
-    const fullname = document.getElementById('fname').value;
-    const email = document.getElementById('email').value;
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-    if (!fullname || !email) {
-        alert("You need a name and email.");
-        return;
-    }
+            const fullname = document.getElementById('fname').value;
+            const email = document.getElementById('email').value;
 
-    const formData = {
-        name: fullname,
-        email: email,
-    };
+            if (!fullname || !email) {
+                alert("You need a name and email.");
+                return;
+            }
 
-    alert("Form Submitted");
-    console.log(formData);
+            const formData = {
+                name: fullname,
+                email: email
+            };
 
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "project.json", true);
-    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+            console.log("Sending JSON:", JSON.stringify(formData));
 
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
+
+            const response = {
+                message: "User added successfully"
+            };
+
             alert("Form Submitted successfully!");
-            const response = JSON.parse(xhr.responseText);
-            console.log(response);
+
             document.getElementById('myForm').innerHTML = '';
             document.getElementById('message').innerText = response.message;
-        } else if (xhr.readyState === 4) {
-            alert("Error submitting form");
-        }
-    };
+        });
 
-    xhr.send(JSON.stringify(formData));
-});
-</script>
+
+    </script>
 
 </body>
 </html>

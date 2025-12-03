@@ -64,6 +64,7 @@ h1 {
  .row {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
  }
 
  .card {
@@ -129,6 +130,50 @@ caption {
     margin: 15px 0; 
 }
 
+fieldset {
+    background-color: rgb(237, 216, 219);
+    width: 40%;
+    margin: auto;
+}
+
+legend {
+    padding: 20px;
+    color: white;
+    background-color: rgb(165, 39, 79) ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.align-row {
+    display: flex;
+    gap: 10px; 
+    margin: 15px 0; 
+}
+
+.align-row label {
+    width: 150px; 
+    text-align: right; 
+}
+
+.align-row input:not([type='submit']), .align-row select, .align-row textarea {
+    padding: 5px 10px;
+    background-color: ivory;
+}
+
+.align-row input:not([type='submit']):focus, .align-row select:focus, .align-row textarea:focus{ 
+    background-color: white;
+}
+
+.align-row input:not([type='submit']){
+    color: black;
+    background-color: ivory;
+    padding: 10px; 
+}
+
+.spacer {
+    width: 150px;
+    text-align: right;
+}
+
 
 /*page 3*/
 
@@ -188,5 +233,15 @@ caption {
         text-align: center;
     }
 
-    
+        .align-row, .check-row {
+        flex-direction: column;
+    }
+
+    fieldset {
+        width: 95%;
+    }
+
+    .align-row label, .spacer {
+        text-align: left;
+    }
 }
