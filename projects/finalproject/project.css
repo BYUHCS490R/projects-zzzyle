@@ -1,7 +1,6 @@
 nav {
     display: flex;
     justify-content: space-evenly;
-    background-color: #F8E9E9;
 }
 
 nav a {
@@ -9,7 +8,6 @@ nav a {
     padding: 15px;
     text-decoration: none;
     color: #D87093;
-    background-color: #F8E9E9
 }
 
 nav a:hover {
@@ -20,6 +18,7 @@ nav a:hover {
 
 h1 {
     text-align: center;
+    color: #D87093;
 }
 
 .black a {
@@ -56,6 +55,10 @@ h1 {
     height: auto;
     display: block;
     margin: 10px auto;
+}
+
+.color {
+    background-color: #F8E9E9;
 }
 
 
@@ -196,13 +199,13 @@ legend {
 
 /*mobile*/
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 500px) {
    main {
         display: flex;
         flex-direction: column;
     }
 
-    .flex {
+    .flex, .mainrowz {
         display: flex;
         flex-direction: column;
     }

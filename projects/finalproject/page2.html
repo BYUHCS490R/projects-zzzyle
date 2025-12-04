@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="project.css">
 </head>
 <body>
-    <header>
-        <h1 class="black"><a href="homepage.html">Discover Switzerland</a></h1>
-        <nav>
-            <a href="page1.html">Geography</a>
-            <div class="black"><a href="page2.html">Cities</a></div>
-            <a href="page3.html">History</a>
-            <a href="page4.html">Travel Guide</a>
-            <a href="page5.html">Food</a>
-        </nav>
-    </header>
+    <div class="color">
+        <header>
+            <h1 class="black"><a href="homepage.html">Discover Switzerland</a></h1>
+            <nav>
+                <a href="page1.html">Geography</a>
+                <div class="black"><a href="page2.html">Cities</a></div>
+                <a href="page3.html">History</a>
+                <a href="page4.html">Travel Guide</a>
+                <a href="page5.html">Food</a>
+            </nav>
+        </header>
+    </div>
 
     <main>
         <div>
@@ -87,6 +89,7 @@
                     </table>
                 </div>
         </div>
+        <a href="https://www.onthegotours.com/Switzerland/Guides/Best-Places-to-Visit">Reference</a>
        
         <div id="message">
             <h1>Join our Newsletter</h1>
@@ -95,8 +98,13 @@
                     <legend>Fill up the Form</legend>
 
                     <div class="align-row">
-                        <label for="fname">Full Name:</label>
+                        <label for="fname">First Name:</label>
                         <input type="text" name="fullname" id="fname" placeholder="Full Name">
+                    </div>
+
+                    <div class="align-row">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" name="lastname" id="lname" placeholder="Last Name">
                     </div>
 
                     <div class="align-row">
@@ -136,38 +144,7 @@
         <p>&copy;2025 Zyle Dana</p>
     </footer>
 
-     <script>
-
-        document.getElementById('myForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const fullname = document.getElementById('fname').value;
-            const email = document.getElementById('email').value;
-
-            if (!fullname || !email) {
-                alert("You need a name and email.");
-                return;
-            }
-
-            const formData = {
-                name: fullname,
-                email: email
-            };
-
-            console.log("Sending JSON:", JSON.stringify(formData));
-
-
-            const response = {
-                message: "User added successfully"
-            };
-
-            alert("Form Submitted successfully!");
-
-            document.getElementById('myForm').innerHTML = '';
-            document.getElementById('message').innerText = response.message;
-        });
-
-
+     <script src="form.js">
     </script>
 
 </body>
